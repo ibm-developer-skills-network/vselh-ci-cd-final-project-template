@@ -31,15 +31,6 @@ echo "*** Installing Python depenencies..."
 source ~/venv/bin/activate && python3 -m pip install --upgrade pip wheel
 source ~/venv/bin/activate && pip install -r requirements.txt
 
-echo "*** Establishing .env file"
-cp dot-env-example .env
-
-echo "*** Starting the Postgres Docker container..."
-make db
-
-echo "*** Checking the Postgres Docker container..."
-docker ps
-
 echo "**************************************************"
 echo " CI/CD Final Project Environment Setup Complete"
 echo "**************************************************"
